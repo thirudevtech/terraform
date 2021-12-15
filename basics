@@ -1,0 +1,4 @@
+terraform init    : Initialize terraform
+terraform plan    : Plan shown for given terraform file
+terraform apply   : Executes given terraform file
+terraform destroy : Destroy resources provided in given terraform file
