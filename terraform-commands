@@ -1,0 +1,29 @@
+Commands:
+---------
+terraform.exe or terraform      : prints available commands
+
+terraform init                  : To initialize terraform, that means it reads providers available in .tf file and download plugins associated with the provider.  
+terraform init -upgrade         : To initialize terraform, that means it reads providers available in .tf file and download plugins with upgraded version comparing with .terraform.lock.hcl file.
+
+terraform plan                  : It will display resource which is defined in .tf file and about to create and also refresh current state of resource which are in live.
+terraform plan -out=path        : terraform plan will save to path given.
+terraform plan -refresh=false   : It will display resource which is defined in .tf file and about to create and it will not refresh current state of resource which are in live.
+terraform plan -target=resourcetype.resourcename : It will display resource which is defined in .tf file are about to create and it will refresh current state of target resource only which are in live.
+
+terraform apply                 : It will create resource which is defined in .tf file
+terraform apply -auto-approve   : It will create resource which is defined in .tf file with out asking conformation.
+
+terraform destroy                                             : It will destroy all resources defined in .tf files from current folder.
+terraform destroy -target <resource-type.Local-resource-name> : It will destroy specific-resource-name defined in .tf files from current folder.
+
+terraform refresh : It will fetch current state of resource that have been deployed and update state file. (note:- "terraform plan" command will also do refresh )
+
+terraform console : To enter into terraform console
+
+terraform fmt     : It will rewrite terraform configuration files to care of the overall formatting
+
+terraform validate: terraform validate primarily checks whether a configuration is syntactically valid.
+
+terraform taint resourcetype.resourcename : It will mark resource as tainted, forcing it to be destroyed and recreated on the next "terraform apply" command.
+
+terraform workspace show : It will show current terraform workspace
