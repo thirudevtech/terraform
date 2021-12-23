@@ -1,0 +1,8 @@
+#FILES:
+-------
+
+1) .terraform.lock.hcl : terraform dependency lock file (Available in terraform version > 0.12 )
+2) variable.tf file    : where we store default values to variables centrally and use anywhere within project.
+3) terraform.tfvars    : where we store custom values to variables centrally and use anywhere within project.
+4) terraform.tfstate   : It contains metadata of resources already in live.
+5) settings.tf         : terraform setting file, this file will create when we add terraform block in project.
