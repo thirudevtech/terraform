@@ -26,4 +26,8 @@ terraform validate: terraform validate primarily checks whether a configuration 
 
 terraform taint resourcetype.resourcename : It will mark resource as tainted, forcing it to be destroyed and recreated on the next "terraform apply" command.
 
-terraform workspace show : It will show current terraform workspace
+terraform workspace show                    : It will show current terraform workspace
+terraform workspace list                    : It will show availabe terraform workspace
+terraform workspace select <workspace-name> : It will switch to selected terraform workspace
+terraform workspace new <workspace-name>    : It will create and switch to new terraform workspace
+
